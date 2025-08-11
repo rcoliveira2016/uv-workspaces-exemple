@@ -1,0 +1,15 @@
+[project]
+name = "uv-workspaces-exemple"
+version = "0.1.0"
+requires-python = ">=3.12"
+dependencies = []
+
+[tool.uv.workspace]
+members = [
+    "monorepo_lib_core",
+    "monorepo_cli",
+    "monorepo_api"
+]
+
+[tool.taskipy.tasks]
+run-api = "uv --project monorepo_api run uvicorn monorepo_api.main:app --reload"

@@ -1,0 +1,19 @@
+version = 1
+revision = 2
+requires-python = ">=3.12"
+
+[[package]]
+name = "monorepo-api"
+version = "0.1.0"
+source = { virtual = "." }
+dependencies = [
+    { name = "monorepo-core" },
+]
+
+[package.metadata]
+requires-dist = [{ name = "monorepo-core", editable = "../monorepo_core" }]
+
+[[package]]
+name = "monorepo-core"
+version = "0.1.0"
+source = { editable = "../monorepo_core" }

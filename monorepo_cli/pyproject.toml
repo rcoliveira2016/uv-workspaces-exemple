@@ -1,0 +1,12 @@
+[project]
+name = "monorepo-cli"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "monorepo_core"
+]
+
+[tool.uv.sources]
+monorepo-core = { workspace = true } 

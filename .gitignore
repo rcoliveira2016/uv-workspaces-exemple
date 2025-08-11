@@ -1,0 +1,48 @@
+# Python
+# -------------------------------------------------------------------
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Distribution / packaging
+/dist/
+/build/
+*.egg-info/
+*.egg
+
+# Virtual Environments
+# -------------------------------------------------------------------
+# Ignore the virtual environment directory created by tools like venv, virtualenv, and uv.
+# This pattern covers the root .venv and any .venv in subdirectories.
+.venv/
+
+# uv cache
+# -------------------------------------------------------------------
+# Although uv's cache is typically global, ignore any local cache directories.
+.uv_cache/
+
+# Test & Coverage
+# -------------------------------------------------------------------
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Secrets
+# -------------------------------------------------------------------
+# Ignore environment files, which may contain secrets.
+# Commit a .env.example file instead.
+.env
+.env.*
+!.env.example
+
+# IDE / Editor
+# -------------------------------------------------------------------
+.vscode/
+.idea/
+
+# OS-specific
+# -------------------------------------------------------------------
+.DS_Store
+Thumbs.db

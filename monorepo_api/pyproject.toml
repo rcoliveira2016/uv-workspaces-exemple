@@ -1,0 +1,14 @@
+[project]
+name = "monorepo-api"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "fastapi>=0.116.1",
+    "monorepo_core",
+    "uvicorn>=0.35.0",
+]
+
+[tool.uv.sources]
+monorepo-core = { workspace = true } 
