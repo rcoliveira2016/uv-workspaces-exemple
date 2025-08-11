@@ -132,6 +132,42 @@ uv --project monorepo_cli run monorepo_cli/main.py
 
 ---
 
+### 7. Simplificar a execução com o Taskipy
+
+Para simplificar a execução de comandos complexos, como o comando para rodar a API, podemos usar a ferramenta **Taskipy**.
+
+#### Instalação do Taskipy
+
+Para instalar a ferramenta no ambiente de desenvolvimento, utilize o seguinte comando:
+
+```bash
+uv add --dev taskipy
+```
+
+#### Configuração no `pyproject.toml`
+
+Adicione a seção `[tool.taskipy.tasks]` no arquivo `pyproject.toml` da raiz. Cada chave dentro dessa seção representa o nome de um comando (ou "task") que você deseja criar.
+
+```toml
+[tool.taskipy.tasks]
+run-api = "uv --project monorepo_api run uvicorn monorepo_api.main:app --reload"
+```
+
+  * **`run-api`**: É o nome do comando que você vai executar. Você pode escolher qualquer nome que faça sentido.
+  * **`"uv --project monorepo_api run uvicorn monorepo_api.main:app --reload"`**: É o comando real que será executado quando você chamar `run-api`.
+
+#### Como usar o Taskipy
+
+Agora, em vez de digitar o comando longo toda vez, você pode simplesmente usar o `uv run` para executar a task que você definiu:
+
+```bash
+uv run task run-api
+```
+
+Isso torna a execução de comandos comuns mais rápida, menos propensa a erros de digitação e padroniza o fluxo de trabalho para todos os desenvolvedores no projeto.
+
+-----
+
 ## Estrutura de Pastas
 
 ```plaintext
