@@ -44,6 +44,8 @@ uv sync
 
 ```json
 {
+    "python.defaultInterpreterPath": ".venv/bin/python",
+    "python.terminal.activateEnvironment": true,
     "pythonEnvy.venvName": ".venv"
 }
 ```
